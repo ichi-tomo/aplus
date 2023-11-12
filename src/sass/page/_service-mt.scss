@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.service-mt{
+    padding-top: rem(40);
+
+    @include mq(md){
+        padding-top: rem(88);
+    }
+}

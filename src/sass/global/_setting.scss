@@ -1,0 +1,38 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 970px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 24px;
+
+////////////////////
+// フォント設定
+////////////////////
+
+$base-font-family: '游明朝 Medium', serif;;
+$second-font-family: "";
+// ※検証ツールでしっかり反映されているか確認する
+
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #000;
+$gray:#3A3A3A;
+$white: #fff;
+
+body {
+  font-family: $base-font-family;
+  background-color: $gray;
+}

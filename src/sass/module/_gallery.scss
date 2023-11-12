@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.gallery{
+    background-color: $gray;
+}
+
+.gallery__images{
+    margin-top: rem(48);
+}
+
+.gallery__image{
+    margin:0 rem(20);
+    position: relative;
+    max-width: rem(400);
+    width: 100%;
+    max-height: rem(280);
+    height: 100%;
+
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 70%;
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

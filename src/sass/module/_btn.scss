@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.btn{
+    display: inline-block;
+    font-size: rem(16);
+    color: $white;
+    letter-spacing: 0.08em;
+    line-height: 1; //yoshina
+    border: 1px solid $white;
+    background-color: inherit;
+    max-width: rem(208);
+    width: 100%;
+    padding: rem(21) 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+//modfire
+
+.btn--white{
+    color: $gray;
+    background-color: $white;
+    font-size: rem(18);
+    min-width: rem(240);
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.56);
+
+    span{
+        font-size: rem(16);
+        font-weight: $regular;
+        display: block;
+        margin-top: rem(8);
+
+        @include mq(md){
+            font-size: rem(24);
+        }
+    }
+
+    @include mq(md){
+        min-width: rem(424);
+        padding: rem(54) 0;
+        font-size: rem(24);
+    }
+}

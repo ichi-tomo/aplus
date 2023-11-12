@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.drawer-menu {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: $gray;
+    transition: .6s;
+    overscroll-behavior: none;
+}
+
+.drawer-menu.open {
+    opacity: 1;
+    left: 0;
+}
+
+.drawer-menu__inner {
+    padding-top: rem(150);
+    padding-bottom: rem(150);
+    text-align: center;
+}
+
+.drawer-menu__items {
+    display: flex;
+    flex-direction: column;
+    gap: rem(62);
+}
+
+.drawer-menu__item {
+    color: $white;
+    font-size: rem(20);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    a {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.drawer-menu__btn{
+    width: clamp(rem(208),55vw,rem(360));
+    margin: auto;
+    display: inline-block;
+    font-size: rem(20);
+    padding: rem(19) 0;
+
+    &:first-of-type{
+        margin-top: rem(64);
+    }
+
+    &:last-of-type{
+        margin-top: rem(40);
+    }
+}

@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.service{
+    background-color: $gray;
+}
+
+.service__inner{
+    padding: 0 rem(40);
+    max-width: rem(600);
+    width: 100%;
+    margin: auto;
+
+    @include mq(md){
+        max-width: rem(1020);
+        padding: 0 rem(25);
+    }
+}
+
+.service__items{
+    margin-top: rem(32);
+    
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: rem(72);
+    }
+}
+
+.service__item{
+    display: block;
+    border: 1px solid $white;
+    text-align: center;
+    padding: rem(32) rem(16);
+
+    &:not(:first-child){
+        margin-top: rem(32);
+
+        @include mq(md){
+            margin-top: 0;
+        }
+    }
+
+    @include mq(md){
+        margin-top: 0;
+        width: calc((100% - rem(41) * 2) / 3);
+
+        &:nth-child(n + 4){//4枚目以降のカードの上部の余白
+            margin-top: rem(25);
+        }
+
+        &:not(:nth-child(3n - 2)){//3枚並びのカードの最初以外のカードの左側の余白
+            margin-left: rem(41);
+        }
+    }
+}
+
+.service__item-title{
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $white;
+    letter-spacing: 0.08em;
+}
+
+.service__image{
+    position: relative;
+    margin-top: rem(30);
+
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 60.6060606061%;
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.service__btn{
+    text-align: center;
+    margin-top: rem(48);
+}

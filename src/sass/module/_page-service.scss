@@ -1,0 +1,171 @@
+@use "global" as *;
+
+.page-service__inner {
+    padding: 0 rem(24);
+    width: 100%;
+    max-width: rem(600);
+    margin: auto;
+
+    @include mq(md) {
+        max-width: rem(996);
+    }
+}
+
+.page-service__item {
+    padding-top: rem(72);
+    position: relative;
+    align-items: flex-start;
+
+    @include mq(md) {
+        display: flex;
+        column-gap: rem(116);
+        padding-top: 0;
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &:not(:first-child) {
+        margin-top: rem(48);
+
+        @include mq(md) {
+            margin-top: rem(104);
+        }
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: rem(248);
+        height: rem(1);
+        background-color: $white;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-58%);
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: rem(1);
+        height: rem(56);
+        background-color: $white;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+}
+
+.page-service__title-sp {
+    font-size: rem(18);
+    font-weight: $regular;
+    color: $white;
+    line-height: 1.7777777778;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.page-service__title-pc {
+    display: none;
+
+    @include mq(md) {
+        font-size: rem(24);
+        font-weight: $regular;
+        color: $white;
+        line-height: 1.3333333333;
+        letter-spacing: 0.08em;
+        display: block;
+        position: relative;
+    }
+}
+
+.page-service__image {
+    position: relative;
+    width: 63.6085626911%;
+    margin-top: rem(24);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+        margin: 0;
+        width: 37.1308016878%;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 125%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-service__content {
+    margin-top: rem(24);
+
+    @include mq(md) {
+        margin-top: 0;
+        width: 50.6329113924%;
+        padding-top: rem(80);
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: rem(248);
+            height: rem(1);
+            background-color: $white;
+            top: 2%;
+            left: 0;
+            transform: translateX(-32%);
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: rem(1);
+            height: rem(56);
+            background-color: $white;
+            top: 2%;
+            left: 18%;
+            // transform: translateX(-50%); nazekakikanai
+        }
+    }
+}
+
+.page-service__text {
+    font-size: rem(14);
+    font-weight: $regular;
+    color: $white;
+    letter-spacing: 0.08em;
+    line-height: 2.2857142857;
+
+    @include mq(md){
+        margin-top: rem(48);
+    }
+}

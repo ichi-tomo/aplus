@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.sub-mv{
+    width: 100%;
+    height: rem(382);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(md){
+        height: rem(400);
+    }
+}
+
+.sub-mv__content{
+    display: flex;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sub-mv__title-en{
+    font-size: rem(24);
+    font-weight: $regular;
+    letter-spacing: 0.08em;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.sub-mv__title-ja{
+    font-size: rem(16);
+    font-weight: $regular;
+    letter-spacing: 0.08em;
+    color: $white;
+}
+
+//modifire
+
+.sub-mv--about{
+    background-image: url('../images/common/about-sub-mv-bg.webp');
+    @include mq(md){
+        background-image: url('../images/common/about-sub-mv-bg-pc.webp');
+    }
+}
+
+.sub-mv--service{
+    background-image: url('../images/common/service-sub-mv-bg.webp');
+    @include mq(md){
+        background-image: url('../images/common/service-sub-mv-bg-pc.webp');
+    }
+}
+
+.sub-mv--news{
+    background-image: url('../images/common/news-sub-mv-bg.webp');
+    @include mq(md){
+        background-image: url('../images/common/news-sub-mv-bg-pc.webp');
+    }
+}

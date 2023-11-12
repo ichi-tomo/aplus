@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+
+.parallax-bg {
+    width: 100%;
+    height: rem(104);
+    position: sticky; //背景画像を固定
+    top: 0;
+    left: 0;
+    z-index: -1; //z軸位置指定
+    background-image: url('../images/common/top-para-sp.webp'); //背景画像を指定
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mq(md) {
+        height: rem(332);
+        background-image: url('../images/common/top-para-pc.webp'); //背景画像を指定
+
+    }
+}

@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.mv {
+    width: 100%;
+    height: 100vh;
+    min-height: rem(300);
+    position: relative;
+}
+
+.mv__images {
+    width: 100%;
+    height: inherit;
+}
+
+.mv__image {
+    width: 100%;
+    height: inherit;
+
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+.mv__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: $white;
+    font-size: rem(24);
+    font-weight: $regular;
+    letter-spacing: 0.08em;
+    width: 100%;
+    padding-left: rem(20);
+
+    @include mq(md){
+        font-size: rem(40);
+        padding-left: rem(136);
+    }
+}
+
+@keyframes zoomUp {
+    //メインビューの画像をズームさせる動き
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);//拡大率
+    }
+}
+
+.add-animation {
+    animation: zoomUp 10s linear 0s normal both;
+}

@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.page-about{
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include mq(md){
+        padding-top: rem(104);
+        padding-bottom: rem(109);
+    }
+}
+
+.page-about__inner {
+    padding: 0 rem(24);
+    margin: auto;
+    width: 100%;
+    max-width: rem(600);
+
+    @include mq(md) {
+        max-width: rem(1016);
+    }
+}
+
+.page-about__texts {
+    text-align: center;
+
+    @include mq(md){
+        max-width: rem(589);
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.page-about__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $white;
+    letter-spacing: 0.08em;
+    line-height: 2;
+
+    &:not(:first-of-type) {
+        font-size: rem(14);
+        line-height: 2.2857142857;
+        margin-top: rem(32);
+    }
+}
+
+.page-about__items{
+    margin-top: rem(72);
+
+    @include mq(md){
+
+    }
+}
+
+.page-about__item {
+
+    &:not(:first-child){
+        margin-top: rem(48);
+    }
+
+    @include mq(md) {
+        display: flex;
+        align-items: flex-start;
+        column-gap: rem(48);
+
+        &:nth-child(2n){
+            flex-direction: row-reverse;
+        }
+
+        &:not(:first-child){
+            margin-top: rem(80);
+        }
+    }
+}
+
+.page-about__title-sp {
+    font-size: rem(16);
+    font-weight: $bold;
+    color: $white;
+    letter-spacing: 0.08em;
+    line-height: 2;
+    text-align: center;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.page-about__title-pc {
+    display: none;
+
+    @include mq(md) {
+        font-size: rem(16);
+        font-weight: $bold;
+        color: $white;
+        letter-spacing: 0.08em;
+        line-height: 2;
+        display: block;
+    }
+}
+
+.page-about__image{
+    margin-top: rem(32);
+    width: 100%;
+    position: relative;
+
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 53.5168195719%;
+
+        @include mq(md){
+            padding-top: 53.4090909091%;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include mq(md){
+        margin-top: 0;
+        width: 45.4545454545%;
+    }
+}
+
+.page-about__contents{
+    margin-top: rem(32);
+
+    @include mq(md){
+        margin-top: 0;
+        width: 49.5867768595%;
+        text-align: left;
+    }
+}

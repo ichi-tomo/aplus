@@ -1,0 +1,180 @@
+@use "global" as *;
+
+.footer {
+    background-color: $gray;
+}
+
+.footer__inner {
+    padding: 0 rem(32);
+    margin: auto;
+
+    @include mq(md) {
+        max-width: rem(967);
+        width: 100%;
+    }
+}
+
+.footer__sp {
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.footer__pc {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.footer__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(md) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.footer__item {
+    color: $white;
+    font-weight: $regular;
+    font-size: rem(10);
+    letter-spacing: 0.08em;
+    line-height: 2.4;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+
+    a {
+        display: block;
+        padding: 0 rem(8);
+    }
+}
+
+.footer__btns {
+    display: flex;
+    column-gap: rem(1);
+    justify-content: center;
+    column-gap: rem(16);
+
+}
+
+.footer__btns {
+    margin-top: rem(24);
+
+    @include mq(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        row-gap: rem(24);
+    }
+}
+
+.footer__btn {
+    max-width: rem(83);
+    width: 100%;
+    font-size: rem(8);
+    padding: rem(6.5) 0;
+
+    @include mq(md) {
+        min-width: rem(176);
+        padding: rem(18) 0;
+        font-size: rem(16);
+    }
+}
+
+.footer__body {
+    display: flex;
+    justify-content: center;
+    column-gap: rem(48);
+    margin-top: rem(32);
+
+    @include mq(md) {
+        align-items: flex-start;
+    }
+}
+
+.footer__logo-wrapper {
+    text-align: center;
+}
+
+.footer__logo-text {
+    font-size: rem(24);
+    font-weight: $regular;
+    color: $white;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @include mq(md){
+        font-size: rem(48);
+    }
+}
+
+.footer__logo {
+    width: rem(72);
+    height: rem(72);
+    margin: auto;
+
+    @include mq(md) {
+        margin: 0;
+        width: rem(152);
+    height: rem(152);
+    }
+}
+
+.footer__name,
+.footer__add,
+.footer__open-time {
+    font-size: rem(10);
+    font-weight: $regular;
+    color: $white;
+    letter-spacing: 0.08em;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.footer__name {
+    text-transform: uppercase;
+}
+
+.footer__add {
+    margin-top: rem(8);
+    @include mq(md) {
+        margin-top: rem(16);
+    }
+}
+
+.footer__open-time {
+    margin-top: rem(8);
+    @include mq(md) {
+        margin-top: rem(16);
+    }
+}
+
+.footer__copy {
+    background-color: #4E4E4E;
+    text-align: center;
+    padding: rem(24) 0;
+
+    small {
+        font-size: rem(8);
+        color: $white;
+        letter-spacing: 0.08em;
+    }
+
+    @include mq(md){
+        margin-top: rem(108);
+        padding: rem(44);
+    }
+}

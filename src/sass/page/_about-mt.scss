@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.about-mt{
+    margin-top: rem(56);
+    margin-bottom: rem(42);
+
+    @include mq(md){
+        margin-bottom: rem(88);
+    }
+}

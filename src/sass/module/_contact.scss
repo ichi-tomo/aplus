@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.contact{
+    background-color: $gray;
+    background-image: url('../images/common/contact-bg-sp.webp'); //背景画像を指定
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: rem(96);
+    padding-bottom: rem(124);
+
+    @include mq(md){
+        background-image: url('../images/common/contact-bg-pc.webp');
+    }
+}
+
+.contact__inner{
+    padding: 0 rem(26);
+}
+
+.contact__title{
+    font-size: rem(40);
+    font-weight: $regular;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: $white;
+
+    @include mq(md){
+        font-size: rem(96);
+        margin-left: rem(71);
+    }
+}
+
+.contact__text{
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    color: $white;
+
+    @include mq(md){
+        font-size: rem(24);
+        margin-left: rem(71);
+    }
+}

@@ -1,0 +1,166 @@
+@use "global" as *;
+
+.header{
+    width: 100%;
+    height: rem(72);
+    background-color: rgba(78,78,78,0.3);
+    position: fixed;
+    z-index: 1;
+
+    @include mq(md){
+        height: rem(100);
+    }
+}
+
+.header__inner{
+    padding: 0 rem(24);
+    height: inherit;
+
+    @include mq(md){
+        padding: 0 rem(10);
+    }
+}
+
+.header__body{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    column-gap: 5%;
+
+    @include mq(md){
+        justify-content: center;
+        column-gap: 5.5%;
+    }
+}
+
+.header__logo{
+    height: inherit;
+    flex-grow: 1;
+
+    @include mq(md){
+        flex-grow: 0;
+    }
+
+    a{
+        display: flex;
+        height: inherit;
+    }
+
+    img{
+        width: rem(48);
+        height: rem(48);
+        display: flex;
+        align-self: center;
+
+        @include mq(md){
+            width: rem(80);
+            height: rem(80);
+        }
+    }
+}
+
+.header__navigation{
+    height: inherit;
+}
+
+.header__items{
+    display: none;
+    height: inherit;
+
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.header__item{
+    color: $white;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    height: inherit;
+    display: flex;
+    
+    a{
+        display: flex;
+        padding: 0 rem(16);
+        height: inherit;
+        align-items: center;
+        flex-shrink: 0;
+    }
+}
+
+.header__btns{
+    display: flex;
+    column-gap: rem(16);
+}
+
+.header__btn{
+    min-width: rem(83);
+    width: 100%;
+    font-size: rem(8);
+    padding: rem(6.5) 0;
+
+    @include mq(md){
+        min-width: rem(176);
+        padding: rem(15) 0;
+        font-size: rem(16);
+    }
+}
+
+.header__drawer-btn{
+    width: rem(20);
+    height: rem(12);
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    
+    @include mq(md){
+        display: none;
+    }
+
+    span{
+        position: absolute;
+        display: inline-block;
+        height: rem(1);
+        width: 100%;
+        background-color: $white;
+        transition: 0.6s;
+
+        &:first-of-type{
+            top: 0;
+        }
+
+        &:nth-of-type(2){
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 80%;
+        }
+
+        &:last-of-type{
+            bottom: 0;
+            width: 80%;
+            right: 0;
+        }
+    }
+}
+
+.js-drawer.open{//ドロワーニューボタンをクリックした時の動き
+    span{
+        &:first-of-type{
+            transform:translateY(-50%) rotate(-315deg);
+            top: 50%;
+        }
+
+        &:nth-of-type(2){
+            opacity: 0;
+            left: 100%;
+        }
+
+        &:last-of-type{
+            transform:translateY(50%) rotate(315deg);
+            bottom: 50%;
+        }
+    }
+}

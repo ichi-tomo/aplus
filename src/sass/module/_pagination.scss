@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(16);
+}
+
+.pagination__item{
+    width: rem(40);
+    height: rem(40);
+    border: 1px solid $white;
+    color: $white;
+    font-size: rem(13);
+    font-weight: $regular;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child{
+        background-color: $white;
+        color: $gray;
+    }
+}

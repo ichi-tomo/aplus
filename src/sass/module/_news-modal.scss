@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.news-modal{
+    display: block;
+    background-color: rgba(1,1,1,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.news-modal__body{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $white;
+    width: 80%;
+    height: 60%;
+    overflow-y: auto;
+    padding: 0 rem(16);
+
+    @include mq(md){
+        width: 50%;
+        padding: 0 rem(48);
+    }
+}
+
+.news-modal__time{
+    font-size: rem(14);
+    display: block;
+    margin-top: rem(8);
+
+    @include mq(md){
+        margin-top: rem(32);
+    }
+
+}
+
+.news-modal__title{
+    font-size: rem(16);
+    text-align: center;
+    margin-top: rem(16);
+    font-size: $bold;
+
+    @include mq(md){
+        font-size: rem(20);
+    }
+}
+
+.news-modal__day{
+    margin-top: rem(16);
+
+    @include mq(md){
+        margin-top: rem(32);
+    }
+}
+
+.news-modal__day,
+.news-modal__open-time,
+.news-modal__place{
+    font-size: rem(16);
+}
+
+.news-modal__content{
+    font-size: rem(14);
+    margin-top: rem(16);
+
+    @include mq(md){
+        margin-top: rem(32);
+        line-height: 1.8;
+        font-size: rem(16);
+    }
+}
