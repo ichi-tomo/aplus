@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .test {
-  color: blue;
+  color: green($color: #000000);
 }
 
 .about {
