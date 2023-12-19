@@ -1,93 +1,97 @@
 @use "global" as *;
 
+.test {
+  color: red;
+}
+
 .about {
-    background-color: $gray;
+  background-color: $gray;
 }
 
 .about__inner {
-    max-width: rem(600);
-    width: 100%;
-    margin: auto;
+  max-width: rem(600);
+  width: 100%;
+  margin: auto;
 }
 
 .about__body {
-    @include mq(md) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: flex-start;
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
 
-        @include mq(md) {
-            margin-top: rem(84);
-        }
+    @include mq(md) {
+      margin-top: rem(84);
     }
+  }
 }
 
 .about__image {
-    position: relative;
-    margin-top: rem(32);
+  position: relative;
+  margin-top: rem(32);
+
+  @include mq(md) {
+    width: 50.5154639175%;
+    margin-top: 0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 66.6666666667%;
 
     @include mq(md) {
-        width: 50.5154639175%;
-        margin-top: 0;
+      padding-top: 66.5306122449%;
     }
+  }
 
-    &:before {
-        content: "";
-        display: block;
-        padding-top: 66.6666666667%;
-
-        @include mq(md) {
-            padding-top: 66.5306122449%;
-        }
-    }
-
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .about__content {
-    margin-top: rem(32);
+  margin-top: rem(32);
 
-    @include mq(md) {
-        width: 35.5670103093%;
-        margin-top: 0;
-    }
+  @include mq(md) {
+    width: 35.5670103093%;
+    margin-top: 0;
+  }
 }
 
 .about__content-title {
-    font-size: rem(16);
-    color: $white;
-    letter-spacing: 0.08em;
-    line-height: 2;
-    font-weight: $regular;
+  font-size: rem(16);
+  color: $white;
+  letter-spacing: 0.08em;
+  line-height: 2;
+  font-weight: $regular;
 }
 
 .about__text {
-    font-size: rem(14);
-    color: $white;
-    letter-spacing: 0.08em;
-    line-height: 2.2857142857;
-    font-weight: $regular;
+  font-size: rem(14);
+  color: $white;
+  letter-spacing: 0.08em;
+  line-height: 2.2857142857;
+  font-weight: $regular;
 
-    @include mq(md) {
-        margin-top: rem(32);
-    }
+  @include mq(md) {
+    margin-top: rem(32);
+  }
 }
 
 .about__btn {
-    margin-top: rem(32);
-    text-align: center;
+  margin-top: rem(32);
+  text-align: center;
 
-    @include mq(md) {
-        text-align: left;
-        margin-top: rem(64);
-    }
+  @include mq(md) {
+    text-align: left;
+    margin-top: rem(64);
+  }
 }
